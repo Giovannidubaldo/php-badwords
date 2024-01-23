@@ -1,6 +1,8 @@
 <?php 
     $testo = $_GET['paragrafo'];
     $parola = $_GET['word'];
+
+    $nuovo_testo = str_replace($parola, '(***)', $testo)
 ?>
 
 <!DOCTYPE html>
@@ -22,7 +24,8 @@
             </div>
             <div class="mt-2">
                 <h2>Paragrafo con censura</h2>
-                <p></p>
+                <p><?php echo $nuovo_testo ?></p>
+                <p>Lunghezza del paragrafo: <?php echo strlen($nuovo_testo) ?></p>
             </div>
         </div>
     </div>
